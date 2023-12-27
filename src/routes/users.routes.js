@@ -3,6 +3,7 @@ import { usersControllers, userViewController, deleteTimedOutUsers, deleteUserCo
 import { isProfileComplete, isAdminMiddleware } from '../controllers/sessions.controller.js';
 import { uploader } from '../utils.js';
 import { userManager } from "../services/factory.js"
+
 const router = Router();
 
 //GET
