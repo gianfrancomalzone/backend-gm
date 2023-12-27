@@ -19,7 +19,7 @@ const getRecoveryLink = async (req, res) => {
                     "subject": "Password recovery",
                     "html": "<html><h1>Password recovery</h1><br/><p>Click on the following link to recover your password: " + config.baseUrl + "recovery/reset-password/" + responseJson.createdRecoveryId + "</p></html>"
                 }
-                const status = await fetch('http://localhost:' + config.port + '/mail/send', {
+                const status = await fetch('https://backend-gm-production.up.railway.app:' + config.port + '/mail/send', {
                     method: "POST",
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(bodyData)

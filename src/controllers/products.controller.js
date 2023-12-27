@@ -65,7 +65,7 @@ const deleteProductController = async (req, res) => {
                     html: "<h1>Hola " + userData.first_name + "</h1><br/><h2>A Product for which you were the Owner has been deleted: " + productData.title + "</h2>"
                 }
                 try {
-                    fetch("http://localhost:" + envConfig.port + "/mail/send", {
+                    fetch("https://backend-gm-production.up.railway.app" + envConfig.port + "/mail/send", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

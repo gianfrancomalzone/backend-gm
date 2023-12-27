@@ -21,7 +21,7 @@ const ticketController = async (req, res) => {
         }
         cuerpo += "</ul><p>El total de tu compra es: $" + ticketData.amount + "</p></body></html>";
         try {
-            fetch('http://localhost:' + config.port + '/mail/send', {
+            fetch('https://backend-gm-production.up.railway.app' + config.port + '/mail/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

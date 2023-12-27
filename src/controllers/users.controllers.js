@@ -66,7 +66,7 @@ const deleteTimedOutUsers = async (req, res) => {
                 html: "<h1>Hola " + users[user].first_name + "</h1><br/><h2>Tu cuenta ha sido eliminada por inactividad</h2><br/><p>Si lo deseas, puedes volver a registrarse en cualquier momento</p>"
             }
             try {
-                fetch("http://localhost:" + envConfig.port + "/mail/send", {
+                fetch("https://backend-gm-production.up.railway.app" + envConfig.port + "/mail/send", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
