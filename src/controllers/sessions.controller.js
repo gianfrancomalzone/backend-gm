@@ -31,18 +31,14 @@ const postLoginController = async (req, res) => {
 
 const githubAuthenticateMiddleWare = passport.authenticate('github', {scope: ['user:email']});
 
-
-const getDummyFunction = async (req, res) => {
-    //no hace nada
-}
+const getDummyFunction = async (req, res) => {}
 
 const githubCallbackMiddleWare = passport.authenticate('github', {failureRedirect: '/api/sessions/fail-gh'});
-
 
 const getGitHubCallbackController = async (req, res) => {
         const user = req.user
         if (!user) {
-            res.status(401).send({ status: 'error', message: 'Cannot login. Something really bad happened... =/' });
+            res.status(401).send({ status: 'error', message: 'Cannot login. Something really bad happened...' });
         } else {
             req.session.user = {
                 id: user._id,
