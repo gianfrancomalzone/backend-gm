@@ -1,0 +1,47 @@
+{
+  "name": "backend-gm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha test/supertest.test.js",
+    "start": "node src/app.js --mode prod",
+    "startMon": "nodemon src/app.js --mode prod --ignore /src/data/*.json",
+    "dev": "nodemon src/app.js --mode dev --ignore /src/data/*.json",
+    "start-fs": "nodemon src/app.js --mode prod --persist file --ignore /src/data/*.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "commander": "^11.0.0",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.0",
+    "express-session": "^1.17.3",
+    "faker-js": "^1.0.0",
+    "mongoose": "^7.4.3",
+    "mongoose-paginate-v2": "^1.3.17",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.7.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}

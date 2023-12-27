@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Completar el Perfil</h1>
+    <h2>Permite actualizar el Perfil</h2>
+    <hr>
+    <form enctype="multipart/form-data" method="POST" id="uploader">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Imagen de Perfil</td>
+                <td><input type="file" id="profilePicture" /></td>
+            </tr>
+            <tr>
+                <td>Imagen de Producto</td>
+                <td><input type="file" id="productPicture"></td>
+            </tr>
+            <tr>
+                <td>Identificación</td>
+                <td><input type="file" id="identificationDocument"></td>
+            </tr>
+            <tr>
+                <td>Comprobante de Domicilio</td>
+                <td><input type="file" id="addressDocument"></td>
+            </tr>
+            <tr>
+                <td>Comprobante de Estado de Cuenta</td>
+                <td><input type="file" id="accountDocument"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Procesar" class="btn btn-success">&nbsp;<a href="/"
+                        class="btn btn-danger">Cancelar</a></td>
+            </tr>
+        </table>
+        <input type="hidden" id="uid" value="{{uid}}">
+    </form>
+
+</div>
+<script src="/js/uploader.js"></script>

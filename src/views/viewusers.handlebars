@@ -1,0 +1,24 @@
+<h2>Usuarios</h2>
+<h3>Muestra los Usuarios cargados en el Sistema</h3>
+<hr>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Nombre Completo</th>
+            <th>E-Mail</th>
+            <th>Rol</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+        {{#if users}}
+        {{#each users}}
+        <tr>
+            <td>{{this.fullname}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.role}}</td>
+            <td><input type="button" onclick="javascript:changeUserRole('{{this._id}}', '{{this.role}}')" class="btn btn-primary" value="Cambiar Rol"></button></td>
+            <td><input type="button" onclick="javascript:deleteUser('{{this._id}}')" class="btn btn-danger" value="Eliminar"></button></td>
+            {{/each}}
+            {{/if}}
+    </table>
+</div>
+<script src="/js/viewusers.js"></script>
